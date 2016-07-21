@@ -281,7 +281,7 @@ let s:themes['papercolor'].dark = {
       \       'color02' : ['#5faf00', '70'],
       \       'color03' : ['#dfaf5f', '179'], 
       \       'color04' : ['#303030', '235'],
-      \       'color05' : ['#578787', '29'], 
+      \       'color05' : ['#578787', '66'], 
       \       'color06' : ['#df875f', '173'], 
       \       'color07' : ['#d0d0d0', '251'], 
       \       'color08' : ['#8a8a8a', '244'], 
@@ -462,8 +462,8 @@ let s:vertsplit_bg = get(s:palette, 'vertsplit_bg', get(s:palette, 'color00')) +
 " Statusline: when set status=2
 let s:statusline_active_fg   = get(s:palette, 'statusline_active_fg', get(s:palette, 'color00')) + ['Black']
 let s:statusline_active_bg   = get(s:palette, 'statusline_active_bg', get(s:palette, 'color07')) + ['DarkMagenta']
-let s:statusline_inactive_fg = get(s:palette, 'statusline_inactive_fg', get(s:palette, 'color07')) + ['LightGray']
-let s:statusline_inactive_bg = get(s:palette, 'statusline_inactive_bg', get(s:palette, 'color00')) + ['LightBlue']
+let s:statusline_inactive_fg = get(s:palette, 'statusline_inactive_fg', get(s:palette, 'color07')) + ['Black']
+let s:statusline_inactive_bg = get(s:palette, 'statusline_inactive_bg', get(s:palette, 'color00')) + ['DarkGray']
 
 " Cursor: in normal mode
 let s:cursor_fg = get(s:palette, 'cursor_fg', get(s:palette, 'color00')) + ['Black']
@@ -862,12 +862,12 @@ call s:HL("markdownLinkTextDelimiter", s:purple, "", "")
 call s:HL("markdownLinkDelimiter", s:purple, "", "")
 call s:HL("markdownCodeDelimiter", s:blue, "", "")
 
-call s:HL("mkdCode", s:olive, "", "none")
+call s:HL("mkdCode", s:olive, "", "")
 call s:HL("mkdLink", s:blue, "", s:bold)
-call s:HL("mkdURL", s:comment, "", "none")
-call s:HL("mkdString", s:foreground, "", "none")
-call s:HL("mkdBlockQuote", s:foreground, s:popupmenu_bg, "none")
-call s:HL("mkdLinkTitle", s:pink, "", "none")
+call s:HL("mkdURL", s:comment, "", "")
+call s:HL("mkdString", s:foreground, "", "")
+call s:HL("mkdBlockQuote", s:foreground, s:popupmenu_bg, "")
+call s:HL("mkdLinkTitle", s:pink, "", "")
 call s:HL("mkdDelimiter", s:aqua, "", "")
 call s:HL("mkdRule", s:pink, "", "")
 
