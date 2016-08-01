@@ -274,72 +274,115 @@ let s:themes['papercolor'] = {
       \   'description' : ' ... '
       \ }
 
+" let s:themes['papercolor'].dark = {
+"       \     'palette' : {
+"       \       'color00' : ['#262626', '234'],
+"       \       'color01' : ['#df0000', '100'], 
+"       \       'color02' : ['#5faf00', '70'],
+"       \       'color03' : ['#dfaf5f', '179'], 
+"       \       'color04' : ['#578787', '66'], 
+"       \       'color05' : ['#8787af', '103'],
+"       \       'color06' : ['#df875f', '173'], 
+"       \       'color07' : ['#d0d0d0', '251'], 
+"       \       'color08' : ['#8a8a8a', '244'], 
+"       \       'color09' : ['#5faf5f', '71'],
+"       \       'color10' : ['#afdf00', '148'],
+"       \       'color11' : ['#af87df', '140'], 
+"       \       'color12' : ['#00afff', '39'], 
+"       \       'color13' : ['#ff5faf', '205'],
+"       \       'color14' : ['#00afaf', '37'], 
+"       \       'color15' : ['#5fafdf', '74'],
+"       \       'color16' : ['#dfaf00', '178'],
+"       \       'color17' : ['#af8787', '138'],
+"       \       'cursor_fg' : ['#262626', '234'],
+"       \       'cursor_bg' : ['#d0d0d0', '251'],
+"       \       'cursorline' : ['#303030', '235'],
+"       \       'cursorcolumn' : ['#303030', '235'],
+"       \       'cursorlinenr_fg' : ['#ffff00', '226'],
+"       \       'cursorlinenr_bg' : ['#262626', '234'],
+"       \       'popupmenu_fg' : ['#d0d0d0', '251'],
+"       \       'popupmenu_bg' : ['#3a3a3a', '236'],
+"       \       'search_fg' : ['#000000', '16'],
+"       \       'search_bg' : ['#00875f', '29'],
+"       \       'linenumber_fg' : ['#585858', '240'],
+"       \       'linenumber_bg' : ['#262626', '234'],
+"       \       'vertsplit_fg' : ['#5f8787', '66'],
+"       \       'vertsplit_bg' : ['#262626', '234'],
+"       \       'statusline_active_fg' : ['#262626', '234'],
+"       \       'statusline_active_bg' : ['#5f8787', '66'],
+"       \       'statusline_inactive_fg' : ['#c6c6c6', '250'],
+"       \       'statusline_inactive_bg' : ['#444444', '237'],
+"       \       'todo_fg' : ['#ff8700', '208'],
+"       \       'todo_bg' : ['#262626', '234'],
+"       \       'error_fg' : ['#262626', '234'],
+"       \       'error_bg' : ['#5f0000', '52'],
+"       \       'matchparen_bg' : ['#4e4e4e', '239'],
+"       \       'matchparen_fg' : ['#d0d0d0', '251'],
+"       \       'visual_fg' : ['#000000', '16'],
+"       \       'visual_bg' : ['#8787af', '103'],
+"       \       'folded_fg' : ['#afdf00', '148'],
+"       \       'folded_bg' : ['#444444', '237'],
+"       \       'wildmenu_fg': ['#262626', '234'],
+"       \       'wildmenu_bg': ['#afdf00', '148'],
+"       \       'tabline_bg':          ['#3a3a3a', '235'],
+"       \       'tabline_active_fg':   ['#1c1c1c', '233'],
+"       \       'tabline_active_bg':   ['#00afaf', '37'],
+"       \       'tabline_inactive_fg': ['#c6c6c6', '250'],
+"       \       'tabline_inactive_bg': ['#585858', '240'],
+"       \       'spellbad':   ['#5f0000', '52'],
+"       \       'spellcap':   ['#5f005f', '53'],
+"       \       'spellrare':  ['#005f00', '22'],
+"       \       'spelllocal': ['#00005f', '17'],
+"       \       'diffadd_fg':    ['#000000', '16'],
+"       \       'diffadd_bg':    ['#5faf00', '70'],
+"       \       'diffdelete_fg': ['#000000', '16'],
+"       \       'diffdelete_bg': ['#5f0000', '52'],
+"       \       'difftext_fg':   ['#000000', '16'],
+"       \       'difftext_bg':   ['#ffdf5f', '221'],
+"       \       'diffchange_fg': ['#000000', '16'],
+"       \       'diffchange_bg': ['#dfaf00', '178']
+"       \     }
+"       \   }
+
+let s:themes['papercolor'].light = {
+      \     'palette' : {
+      \       'color00' : ['#eeeeee', '255'],
+      \       'color01' : ['#af0000', '124'], 
+      \       'color02' : ['#008700', '28'],
+      \       'color03' : ['#5f8700', '64'],
+      \       'color04' : ['#0087af', '31'],
+      \       'color05' : ['#878787', '102'], 
+      \       'color06' : ['#005f87', '24'],
+      \       'color07' : ['#444444', '238'], 
+      \       'color08' : ['#bcbcbc', '250'],
+      \       'color09' : ['#d70000', '160'], 
+      \       'color10' : ['#d70087', '162'],
+      \       'color11' : ['#875fd7', '98'],
+      \       'color12' : ['#d75f00', '166'], 
+      \       'color13' : ['#d75f00', '166'],
+      \       'color14' : ['#005faf', '25'],
+      \       'color15' : ['#005f87', '24']
+      \     }
+      \   }
+
 let s:themes['papercolor'].dark = {
       \     'palette' : {
       \       'color00' : ['#262626', '234'],
-      \       'color01' : ['#df0000', '100'], 
-      \       'color02' : ['#5faf00', '70'],
+      \       'color01' : ['#ff0087', '198'], 
+      \       'color02' : ['#5fd700', '76'],
       \       'color03' : ['#dfaf5f', '179'], 
-      \       'color04' : ['#303030', '235'],
-      \       'color05' : ['#578787', '66'], 
+      \       'color04' : ['#5fafd7', '74'],
+      \       'color05' : ['#8a8a8a', '244'],
       \       'color06' : ['#df875f', '173'], 
       \       'color07' : ['#d0d0d0', '251'], 
-      \       'color08' : ['#8a8a8a', '244'], 
+      \       'color08' : ['#606060', '240'],
       \       'color09' : ['#5faf5f', '71'],
       \       'color10' : ['#afdf00', '148'],
-      \       'color11' : ['#af87df', '140'], 
-      \       'color12' : ['#444444', '237'], 
+      \       'color11' : ['#af87d7', '140'], 
+      \       'color12' : ['#ffaf00', '214'],
       \       'color13' : ['#ff5faf', '205'],
       \       'color14' : ['#00afaf', '37'], 
-      \       'color15' : ['#5fafdf', '74'],
-      \       'color16' : ['#dfaf00', '178'],
-      \       'color17' : ['#af8787', '138'],
-      \       'cursor_fg' : ['#262626', '234'],
-      \       'cursor_bg' : ['#d0d0d0', '251'],
-      \       'cursorcolumn' : ['#303030', '235'],
-      \       'cursorlinenr_fg' : ['#ffff00', '226'],
-      \       'cursorlinenr_bg' : ['#262626', '234'],
-      \       'popupmenu_fg' : ['#d0d0d0', '251'],
-      \       'popupmenu_bg' : ['#3a3a3a', '236'],
-      \       'search_fg' : ['#000000', '16'],
-      \       'search_bg' : ['#00875f', '29'],
-      \       'linenumber_fg' : ['#585858', '240'],
-      \       'linenumber_bg' : ['#262626', '234'],
-      \       'vertsplit_fg' : ['#5f8787', '66'],
-      \       'vertsplit_bg' : ['#262626', '234'],
-      \       'statusline_active_fg' : ['#262626', '234'],
-      \       'statusline_active_bg' : ['#5f8787', '66'],
-      \       'statusline_inactive_fg' : ['#c6c6c6', '250'],
-      \       'statusline_inactive_bg' : ['#444444', '237'],
-      \       'todo_fg' : ['#ff8700', '208'],
-      \       'todo_bg' : ['#262626', '234'],
-      \       'error_fg' : ['#262626', '234'],
-      \       'error_bg' : ['#5f0000', '52'],
-      \       'matchparen_bg' : ['#4e4e4e', '239'],
-      \       'matchparen_fg' : ['#d0d0d0', '251'],
-      \       'visual_fg' : ['#000000', '16'],
-      \       'visual_bg' : ['#8787af', '103'],
-      \       'folded_fg' : ['#afdf00', '148'],
-      \       'folded_bg' : ['#444444', '237'],
-      \       'wildmenu_fg': ['#262626', '234'],
-      \       'wildmenu_bg': ['#afdf00', '148'],
-      \       'tabline_bg':          ['#3a3a3a', '235'],
-      \       'tabline_active_fg':   ['#1c1c1c', '233'],
-      \       'tabline_active_bg':   ['#00afaf', '37'],
-      \       'tabline_inactive_fg': ['#c6c6c6', '250'],
-      \       'tabline_inactive_bg': ['#585858', '240'],
-      \       'spellbad':   ['#5f0000', '52'],
-      \       'spellcap':   ['#5f005f', '53'],
-      \       'spellrare':  ['#005f00', '22'],
-      \       'spelllocal': ['#00005f', '17'],
-      \       'diffadd_fg':    ['#000000', '16'],
-      \       'diffadd_bg':    ['#5faf00', '70'],
-      \       'diffdelete_fg': ['#000000', '16'],
-      \       'diffdelete_bg': ['#5f0000', '52'],
-      \       'difftext_fg':   ['#000000', '16'],
-      \       'difftext_bg':   ['#ffdf5f', '221'],
-      \       'diffchange_fg': ['#000000', '16'],
-      \       'diffchange_bg': ['#dfaf00', '178']
+      \       'color15' : ['#578787', '66']
       \     }
       \   }
 
@@ -421,28 +464,23 @@ endif
 " parameter might not exist, for example, on 16-color terminal, the variables below 
 " only store the color names to use the terminal color palette which is the only
 " thing available therefore no need for GUI-color or 256-color.
-let s:background   = get(s:palette, 'color00') + ['Black']
-let s:negative     = get(s:palette, 'color01') + ['DarkRed']
-let s:positive     = get(s:palette, 'color02') + ['DarkGreen']
-let s:olive        = get(s:palette, 'color03') + ['DarkYellow']
-let s:cursorline   = get(s:palette, 'color04') + ['DarkBlue']
-let s:highlight_bg = get(s:palette, 'color05') + ['DarkMagenta']
-let s:navy         = get(s:palette, 'color06') + ['DarkCyan']
-let s:foreground   = get(s:palette, 'color07') + ['LightGray']
+let s:background = get(s:palette, 'color00') + ['Black']
+let s:negative   = get(s:palette, 'color01') + ['DarkRed']
+let s:positive   = get(s:palette, 'color02') + ['DarkGreen']
+let s:olive      = get(s:palette, 'color03') + ['DarkYellow'] " string
+let s:neutral    = get(s:palette, 'color04') + ['DarkBlue']
+let s:comment    = get(s:palette, 'color05') + ['DarkMagenta']
+let s:navy       = get(s:palette, 'color06') + ['DarkCyan'] " storageclass
+let s:foreground = get(s:palette, 'color07') + ['LightGray']
 
-let s:comment      = get(s:palette, 'color08') + ['DarkGray']
-let s:red          = get(s:palette, 'color09') + ['LightRed']
-let s:pink         = get(s:palette, 'color10') + ['LightGreen']
-let s:purple       = get(s:palette, 'color11') + ['LightYellow']
-let s:nontext      = get(s:palette, 'color12') + ['LightBlue']
-let s:orange       = get(s:palette, 'color13') + ['LightMagenta']
-let s:blue         = get(s:palette, 'color14') + ['LightCyan']
-let s:aqua         = get(s:palette, 'color15') + ['White']
-
-let s:green        = get(s:palette, 'color16', get(s:palette, 'color13')) + ['LightMagenta']
-let s:wine         = get(s:palette, 'color17', get(s:palette, 'color11')) + ['LightYellow']
-
-" echo s:aqua
+let s:nontext    = get(s:palette, 'color08') + ['DarkGray']
+let s:red        = get(s:palette, 'color09') + ['LightRed'] " import / try/catch
+let s:pink       = get(s:palette, 'color10') + ['LightGreen'] " statement, type
+let s:purple     = get(s:palette, 'color11') + ['LightYellow'] " if / conditional
+let s:accent     = get(s:palette, 'color12') + ['LightBlue']
+let s:orange     = get(s:palette, 'color13') + ['LightMagenta'] " number
+let s:blue       = get(s:palette, 'color14') + ['LightCyan'] " other keyword
+let s:highlight  = get(s:palette, 'color15') + ['White']
 
 " EXTENDED COLORS:
 " From here on, all colors are optional and must have default values (3rd parameter of the 
@@ -450,30 +488,36 @@ let s:wine         = get(s:palette, 'color17', get(s:palette, 'color11')) + ['Li
 " provide the extended colors. The default values should be reasonably sensible. 
 " The terminal color must be provided also.
 
+let s:aqua       = get(s:palette, 'color16', get(s:palette, 'color14')) + ['LightCyan']
+let s:green      = get(s:palette, 'color17', get(s:palette, 'color13')) + ['LightMagenta']
+let s:wine       = get(s:palette, 'color18', get(s:palette, 'color11')) + ['LightYellow']
 
 " LineNumber: when set number
 let s:linenumber_fg  = get(s:palette, 'linenumber_fg', get(s:palette, 'color08')) + ['DarkGray']
 let s:linenumber_bg  = get(s:palette, 'linenumber_bg', get(s:palette, 'color00')) + ['Black']
 
 " Vertical Split: when there are more than 1 window side by side, ex: <C-W><C-V>
-let s:vertsplit_fg = get(s:palette, 'vertsplit_fg', get(s:palette, 'color07')) + ['DarkMagenta']
+let s:vertsplit_fg = get(s:palette, 'vertsplit_fg', get(s:palette, 'color15')) + ['White']
 let s:vertsplit_bg = get(s:palette, 'vertsplit_bg', get(s:palette, 'color00')) + ['Black']
 
 " Statusline: when set status=2
 let s:statusline_active_fg   = get(s:palette, 'statusline_active_fg', get(s:palette, 'color00')) + ['Black']
-let s:statusline_active_bg   = get(s:palette, 'statusline_active_bg', get(s:palette, 'color07')) + ['DarkMagenta']
-let s:statusline_inactive_fg = get(s:palette, 'statusline_inactive_fg', get(s:palette, 'color07')) + ['Black']
-let s:statusline_inactive_bg = get(s:palette, 'statusline_inactive_bg', get(s:palette, 'color00')) + ['DarkGray']
+let s:statusline_active_bg   = get(s:palette, 'statusline_active_bg', get(s:palette, 'color15')) + ['White']
+let s:statusline_inactive_fg = get(s:palette, 'statusline_inactive_fg', get(s:palette, 'color07')) + ['LightGray']
+let s:statusline_inactive_bg = get(s:palette, 'statusline_inactive_bg', get(s:palette, 'color08')) + ['DarkGray']
+
 
 " Cursor: in normal mode
 let s:cursor_fg = get(s:palette, 'cursor_fg', get(s:palette, 'color00')) + ['Black']
 let s:cursor_bg = get(s:palette, 'cursor_bg', get(s:palette, 'color07')) + ['LightGray']
 
+let s:cursorline   = get(s:palette, 'cursorline', get(s:palette, 'color00')) + ['Black']
+
 " CursorColumn: when set cursorcolumn
-let s:cursorcolumn = get(s:palette, 'cursorcolumn', get(s:palette, 'color01')) + ['DarkBlue']
+let s:cursorcolumn = get(s:palette, 'cursorcolumn', get(s:palette, 'color00')) + ['Black']
 
 " CursorLine Number: when set cursorline number
-let s:cursorlinenr_fg = get(s:palette, 'cursorlinenr_fg', get(s:palette, 'color15')) + ['White']
+let s:cursorlinenr_fg = get(s:palette, 'cursorlinenr_fg', get(s:palette, 'color13')) + ['LightMagenta']
 let s:cursorlinenr_bg = get(s:palette, 'cursorlinenr_bg', get(s:palette, 'color00')) + ['Black']
 
 " Popup Menu: when <C-X><C-N> for autocomplete
@@ -481,9 +525,8 @@ let s:popupmenu_fg = get(s:palette, 'popupmenu_fg', get(s:palette, 'color07')) +
 let s:popupmenu_bg = get(s:palette, 'popupmenu_bg', get(s:palette, 'color01')) + ['DarkBlue']
 
 " Search: ex: when * on a word
-let s:highlight_fg = get(s:palette, 'search_fg', get(s:palette, 'color00')) + ['Black']
-" let s:highlight_fg = get(s:palette, 'search_fg', get(s:palette, 'color00')) + ['LightGray']
-let s:highlight_bg = get(s:palette, 'search_bg', get(s:palette, 'color05')) + ['LightGray']
+let s:search_fg = get(s:palette, 'search_fg', get(s:palette, 'color00')) + ['Black']
+let s:search_bg = get(s:palette, 'search_bg', get(s:palette, 'color15')) + ['White']
 
 " Todo: ex: TODO
 let s:todo_fg    = get(s:palette, 'todo_fg', get(s:palette, 'color05')) + ['LightYellow']
@@ -494,16 +537,16 @@ let s:error_fg      = get(s:palette, 'error_fg', get(s:palette, 'color00')) + ['
 let s:error_bg      = get(s:palette, 'error_bg', get(s:palette, 'color04')) + ['DarkRed']
 
 " Match Parenthesis: selecting an opening/closing pair and the other one will be highlighted
-let s:matchparen_fg = get(s:palette, 'matchparen_fg', get(s:palette, 'color00')) + ['Black']
-let s:matchparen_bg = get(s:palette, 'matchparen_bg', get(s:palette, 'color05')) + ['DarkMagenta']
+let s:matchparen_fg = get(s:palette, 'matchparen_fg', get(s:palette, 'color00')) + ['LightMagenta']
+let s:matchparen_bg = get(s:palette, 'matchparen_bg', get(s:palette, 'color05')) + ['Black']
 
 " Visual:
-let s:visual_bg = get(s:palette, 'visual_fg', get(s:palette, 'color00')) + ['LightGray']
-let s:visual_fg = get(s:palette, 'visual_bg', get(s:palette, 'color07')) + ['Black']
+let s:visual_fg = get(s:palette, 'visual_fg', get(s:palette, 'color08')) + ['White']
+let s:visual_bg = get(s:palette, 'visual_bg', get(s:palette, 'color07')) + ['Black']
 
 " Folded:
 let s:folded_fg = get(s:palette, 'folded_fg', get(s:palette, 'color00')) + ['Black']
-let s:folded_bg = get(s:palette, 'folded_bg', get(s:palette, 'color03')) + ['DarkCyan']
+let s:folded_bg = get(s:palette, 'folded_bg', get(s:palette, 'color03')) + ['DarkYellow']
 
 " WildMenu: Autocomplete command, ex: :color <tab><tab> 
 let s:wildmenu_fg  = get(s:palette, 'wildmenu_fg', get(s:palette, 'color00')) + ['Black']
@@ -530,10 +573,10 @@ let s:diffchange_bg = get(s:palette, 'spelllocal', get(s:palette, 'color14')) + 
 
 " Tabline: when having tabs, ex: :tabnew
 let s:tabline_bg          = get(s:palette, 'tabline_bg', get(s:palette, 'color00')) + ['Black']
-let s:tabline_active_fg   = get(s:palette, 'tabline_active_fg', get(s:palette, 'color07')) + ['Black']
-let s:tabline_active_bg   = get(s:palette, 'tabline_active_bg', get(s:palette, 'color05')) + ['DarkMagenta']
-let s:tabline_inactive_fg = get(s:palette, 'tabline_inactive_fg', get(s:palette, 'color07')) + ['LightGray']
-let s:tabline_inactive_bg = get(s:palette, 'tabline_inactive_bg', get(s:palette, 'color12')) + ['LightBlue']
+let s:tabline_active_fg   = get(s:palette, 'tabline_active_fg', get(s:palette, 'color07')) + ['LightGray']
+let s:tabline_active_bg   = get(s:palette, 'tabline_active_bg', get(s:palette, 'color00')) + ['Black']
+let s:tabline_inactive_fg = get(s:palette, 'tabline_inactive_fg', get(s:palette, 'color07')) + ['Black']
+let s:tabline_inactive_bg = get(s:palette, 'tabline_inactive_bg', get(s:palette, 'color08')) + ['DarkMagenta']
 
 " Plugin: BufTabLine https://github.com/ap/vim-buftabline
 let s:buftabline_bg          = get(s:palette, 'buftabline_bg', get(s:palette, 'color00')) + ['Black']
@@ -560,15 +603,15 @@ endif
 call s:HL("Cursor", s:cursor_fg, s:cursor_bg, "")
 call s:HL("NonText", s:nontext, "", "")
 call s:HL("SpecialKey", s:nontext, "", "")
-call s:HL("Search", s:highlight_fg, s:highlight_bg, "")
+call s:HL("Search", s:search_fg, s:search_bg, "")
 call s:HL("LineNr", s:linenumber_fg, s:linenumber_bg, "")
 
 call s:HL("StatusLine", s:statusline_active_bg, s:statusline_active_fg, "")
 call s:HL("StatusLineNC", s:statusline_inactive_bg, s:statusline_inactive_fg, "")
 
-call s:HL("VertSplit", s:vertsplit_fg, s:vertsplit_bg, "none")
+call s:HL("VertSplit", s:vertsplit_bg, s:vertsplit_fg, "")
 
-call s:HL("Visual", s:visual_bg, s:visual_fg, "")
+call s:HL("Visual", s:visual_fg, s:visual_bg, "")
 call s:HL("Directory", s:blue, "", "")
 call s:HL("ModeMsg", s:olive, "", "")
 call s:HL("MoreMsg", s:olive, "", "")
@@ -581,7 +624,11 @@ call s:HL("WildMenu", s:wildmenu_fg, s:wildmenu_bg, s:bold)
 
 if version >= 700
   call s:HL("CursorLine", "", s:cursorline, "none")
-  call s:HL("CursorLineNr", s:cursorlinenr_fg, s:cursorlinenr_bg, "none")
+  if s:use_16_color
+    call s:HL("CursorLineNr", s:cursorlinenr_fg, s:cursorlinenr_bg, "")
+  else
+    call s:HL("CursorLineNr", s:cursorlinenr_fg, s:cursorlinenr_bg, "none")
+  endif
   call s:HL("CursorColumn", "", s:cursorcolumn, "none")
   call s:HL("PMenu", s:popupmenu_fg, s:popupmenu_bg, "none")
   call s:HL("PMenuSel", s:popupmenu_fg, s:popupmenu_bg, "reverse")
@@ -591,9 +638,9 @@ if version >= 703
   call s:HL("ColorColumn", "", s:cursorcolumn, "none")
 end
 
-call s:HL("TabLine", s:tabline_inactive_fg, s:tabline_inactive_bg, "None")
-call s:HL("TabLineFill", "", s:tabline_bg, "None")
-call s:HL("TabLineSel", s:tabline_active_fg, s:tabline_active_bg, "None")
+call s:HL("TabLine", s:tabline_inactive_fg, s:tabline_inactive_bg, "none")
+call s:HL("TabLineFill", s:tabline_bg, s:tabline_bg, "none")
+call s:HL("TabLineSel", s:tabline_active_fg, s:tabline_active_bg, "none")
 
 call s:HL("BufTabLineCurrent", s:buftabline_current_fg, s:buftabline_current_bg, "None")
 call s:HL("BufTabLineActive", s:buftabline_active_fg, s:buftabline_active_bg, "None")
@@ -1456,4 +1503,4 @@ delf s:grey_colour
 delf s:grey_level
 delf s:grey_number
 " }}}
-" vim: fdm=marker
+" vim: fdm=marker ff=unix
