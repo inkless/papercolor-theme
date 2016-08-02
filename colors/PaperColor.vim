@@ -265,6 +265,7 @@ fun s:Load_Settings_Override(custom)
 endfun
 " }}}
 
+
 " THEMES: {{{
 
 let s:themes = {}
@@ -432,6 +433,61 @@ else " if s:use_16_color
   let s:bold = ""
   " let s:palette = {} " disregard color palette for GUI or 256-color
 endif
+" }}}
+
+
+" TESTING: {{{
+
+" TODO
+
+fun! s:test_report(test, verbose)
+  if a:test[1] != ''
+    echo a:test[0]
+    echo '==> failed. ' . a:test[1]
+    return 1
+
+  elseif a:verbose == 1
+    echo a:test[0]
+    echo '==> passed.'
+    return 0
+
+  endif
+endfun
+
+fun! s:should_have_color00_to_color15()
+  let l:premise = 'All color palettes should have color00 to color15'
+  let l:error = ''
+  return [l:premise, l:error]
+endfun
+
+
+" Work in Progress
+fun! PaperColor#Test()
+  let l:verbose = 1 " 0: only error
+  let l:test_functions =  [function('s:should_have_color00_to_color15')]
+  if l:verbose == 1
+    echo '----- PaperColor-Theme ------'
+    echo '-------- TEST BEGIN ---------'
+  endif
+  " for each test function
+  "
+  let l:hasFailed = 0
+  let l:hasFailed = l:hasFailed || s:test_report(s:should_have_color00_to_color15(), l:verbose)
+
+  echo ' '
+  echo "Test function: "
+  echon l:test_functions[0]
+  echon '()'
+
+  if l:verbose == 1
+    echo '-------- TEST END -----------'
+  endif
+  return l:hasFailed
+endfun
+
+" let g:PaperColor_Theme_Test = 1
+" if exists("g:PaperColor_Theme_Test") && g:PaperColor_Theme_Test == 1
+" endif
 " }}}
 
 " if s:use256
