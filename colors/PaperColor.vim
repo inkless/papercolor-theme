@@ -1793,7 +1793,7 @@ fun! s:generate_color_palettes()
 
   endfor " end looping through themes
   " echo l:content
-  " call s:writeToFile(l:content, "palettes.yml")
+  call s:writeToFile(l:content, "palettes.yml")
 endfun
 
 fun! s:generate_vim_highlightings()
@@ -1804,18 +1804,29 @@ fun! s:generate_vim_highlightings()
   for [l:name, l:theme] in items(s:themes)
 
     let l:content .= l:name . ":\n"
-    for l:variant in ['light', 'dark']
-      if has_key(l:theme, l:variant)
 
-        let l:content .= l:indent1 . l:variant . ":\n"
+    for l:mode in [s:MODE_TRUE_OR_256_COLOR, s:MODE_16_COLOR]
+      let l:is_16_color_checked = 0
+      let l:mode_display_name = 'high-color'
+      if l:mode == s:MODE_16_COLOR
+        let l:mode_display_name = 'low-color'
+      endif
 
-        let s:palette = l:theme[l:variant].palette
-        for l:mode in [s:MODE_TRUE_OR_256_COLOR, s:MODE_16_COLOR]
-          let l:mode_display_name = 'high-color'
+      let l:content .= l:indent1 . l:mode_display_name . ":\n"
+
+      for l:variant in ['light', 'dark']
+        if has_key(l:theme, l:variant)
           if l:mode == s:MODE_16_COLOR
-            let l:mode_display_name = 'low-color'
+            if l:is_16_color_checked == 1
+              continue
+            else
+              let l:is_16_color_checked = 1
+            endif
           endif
-          let l:content .= l:indent2 . l:mode_display_name . ":\n"
+
+          let l:content .= l:indent2 . l:variant . ":\n"
+
+          let s:palette = l:theme[l:variant].palette
 
           let s:mode = l:mode
           call s:adapt_to_environment()
@@ -1825,10 +1836,12 @@ fun! s:generate_vim_highlightings()
           for [l:group, l:highlighting] in s:highlightings
             let l:content .= l:indent3 . l:group . ": " . l:highlighting . "\n"
           endfor
-        endfor
 
-      endif
-    endfor " end looping through variants
+        endif
+      endfor " end looping through variants
+
+    endfor
+
 
   endfor " end looping through themes
   " echo l:content
