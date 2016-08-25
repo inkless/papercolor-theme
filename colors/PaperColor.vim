@@ -820,10 +820,9 @@ call s:HL("cssClassName", s:pink, "", "")
   call s:HL("javaScriptMember", s:navy, "", "")
   call s:HL("javaScriptReserved", s:navy, "", "")
   call s:HL("javascriptNull", s:comment, "", "bold")
-  call s:HL("javascriptGlobal", s:foreground, "", "")
+  call s:HL("javascriptGlobal", s:red, "", "")
   call s:HL("javascriptStatement", s:pink, "", "")
   call s:HL("javaScriptMessage", s:foreground, "", "")
-  call s:HL("javaScriptMember", s:foreground, "", "")
 
   " @target https://github.com/pangloss/vim-javascript
   call s:HL("jsFuncParens", s:blue, "", "")
